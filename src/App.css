@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+:root {
+  --box: 32px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.playground {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ground {
+  position: relative;
 }
+.background {
+  margin: 0 auto;
+}
+.snake-playground {
+  position: relative;
+  width: 608px;
+  height: 608px;
+  margin: 0 auto;
+}
+.snake-part {
+  background-color: green;
+  position: absolute;
+  width: var(--box);
+  height: var(--box);
+  border: 1px solid #fff;
+  z-index: 2;
+}
+.snake-food {
+  position: absolute;
+  width: var(--box);
+  height: var(--box);
+  z-index: 1;
+}
+.score {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  z-index: 10;
+  font-size: xx-large;
+  color: rgb(197, 31, 31);
+}
+.leaderboard {
+  width: 50%;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  min-height: 50%;
+  max-width: fit-content;
+  background-color: #fff;
+  z-index: 100;
+  border: 1px solid black;
+  display: none ;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.form-popup{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
